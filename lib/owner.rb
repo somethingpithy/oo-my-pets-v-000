@@ -4,18 +4,22 @@ class Owner
 
   @owners = []
   
-  def self.reset_all
-    @owners.clear
-  end
-
-  def self.count
-    @owners.count
-  end
-
   def initialize(species)
     @species = species
     @owners << self
     @pets = {:fishes => [], :dogs => [], :cats => []}
+  end
+
+  def self.all
+    @all
+  end
+  
+  def self.reset_all
+    @owners.clear
+  end
+  
+  def self.count
+    @owners.count
   end
 
   def say_species
